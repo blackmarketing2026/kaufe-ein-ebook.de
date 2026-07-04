@@ -221,17 +221,6 @@ section {
   color: #9fb2da;
 }
 
-.payment-badge {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  display: block;
-}
-
-.hero-actions .payment-badge {
-  margin-top: 6px;
-}
-
 .hero-visual {
   display: flex;
   justify-content: center;
@@ -613,11 +602,6 @@ section {
   font-weight: 800;
   color: var(--blue-dark);
   margin-bottom: 18px;
-}
-
-.value-price .payment-badge {
-  max-width: 320px;
-  margin: 16px auto 0;
 }
 
 /* ---------- Proof ---------- */
