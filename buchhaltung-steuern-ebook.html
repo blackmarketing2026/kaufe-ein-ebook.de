@@ -72,14 +72,10 @@
         <div class="hero-copy reveal">
           <div class="badge-row">
             <span class="badge">Praxis-Guide</span>
-            <span class="badge">Für Solo-Selbstständige</span>
+            <span class="badge">Sofort als PDF</span>
           </div>
           <h1>Spiel die Steuer-Regeln, bevor das Finanzamt dich überrascht.</h1>
           <p class="hero-subline">Der einfache Praxis-Guide für Solo-Selbstständige, die Einkommensteuer, Umsatzsteuer, Voranmeldung und Gewerbesteuer endlich besser verstehen und organisieren wollen.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary btn-lg" href="https://buy.stripe.com/fZu7sK4d7cQX90A6CC77O0v">E-Book jetzt herunterladen</a>
-            <span>Digitales E-Book · Sofortzugang nach Zahlung via Stripe</span>
-          </div>
           <ul class="hero-points" aria-label="Wichtige Vorteile">
             <li>Steuerarten klar einordnen</li>
             <li>Rücklagen strukturierter planen</li>
@@ -87,9 +83,51 @@
           </ul>
         </div>
 
-        <div class="hero-cover reveal">
-          <img src="assets/img/products/ebook-buchhaltung-steuern-cover.webp" alt="Cover des E-Books Buchhaltung und Steuern: Wie du das Spiel mit dem Finanzamt durchspielst" width="600" height="900" loading="eager" />
+        <div class="hero-product reveal">
+          <div class="hero-cover">
+            <img src="assets/img/products/ebook-buchhaltung-steuern-cover.webp" alt="Cover des E-Books Buchhaltung und Steuern: Wie du das Spiel mit dem Finanzamt durchspielst" width="600" height="900" loading="eager" />
+          </div>
+          <div class="hero-proof-card" aria-label="Kurzinfos zum E-Book">
+            <strong>4,99 €</strong>
+            <span>Digitales E-Book</span>
+            <small>Sofortzugang nach Zahlung via Stripe</small>
+          </div>
         </div>
+
+        <div class="hero-action-block reveal">
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-lg" href="https://buy.stripe.com/fZu7sK4d7cQX90A6CC77O0v">E-Book jetzt herunterladen</a>
+            <span>Allgemeine Orientierung. Keine individuelle Steuerberatung.</span>
+          </div>
+        </div>
+
+        <ul class="hero-trust-row reveal" aria-label="Vertrauensmerkmale">
+          <li><strong>Sicher</strong><span>Zahlung über Stripe</span></li>
+          <li><strong>Sofort</strong><span>Download nach dem Kauf</span></li>
+          <li><strong>Klar</strong><span>Kein Steuerberater-Bla-Bla</span></li>
+          <li><strong>Passend</strong><span>Für Solo-Selbstständige</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Trust -->
+    <section class="trust-section" aria-label="Weitere Vertrauenselemente">
+      <div class="container trust-grid">
+        <article class="trust-card reveal">
+          <span>✓</span>
+          <h2>Sicher bezahlen</h2>
+          <p>Der Kauf läuft verschlüsselt über Stripe.</p>
+        </article>
+        <article class="trust-card reveal">
+          <span>↧</span>
+          <h2>Sofort lesen</h2>
+          <p>Nach erfolgreicher Zahlung erhältst du Zugriff auf das E-Book.</p>
+        </article>
+        <article class="trust-card reveal">
+          <span>§</span>
+          <h2>Realistisch eingeordnet</h2>
+          <p>Orientierung zur Selbsthilfe, ohne den Steuerberater zu ersetzen.</p>
+        </article>
       </div>
     </section>
 
@@ -290,6 +328,11 @@
 
   <div class="sticky-cta" id="sticky-cta">
     <a class="btn btn-primary" href="https://buy.stripe.com/fZu7sK4d7cQX90A6CC77O0v">Jetzt E-Book kaufen</a>
+  </div>
+
+  <div class="purchase-toast" id="purchase-toast" role="status" aria-live="polite" aria-atomic="true" hidden>
+    <span class="purchase-toast-icon">✓</span>
+    <p><strong id="purchase-toast-name">Person X</strong> hat vor <span id="purchase-toast-time">42 Sekunden</span> gekauft.</p>
   </div>
 
   <script src="assets/js/steuer-buchhaltung-ebook.js"></script>
