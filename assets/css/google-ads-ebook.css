@@ -604,6 +604,14 @@ section {
   margin-bottom: 18px;
 }
 
+.payment-badge {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  margin: 18px auto 0;
+}
+
 /* ---------- Proof ---------- */
 .proof {
   background: var(--gray-50);
