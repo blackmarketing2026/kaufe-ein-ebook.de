@@ -7,14 +7,6 @@
     "cover": "assets/img/products/ebook-buchhaltung-steuern-cover.webp",
     "thankYouUrl": "ebook-download-buchhaltung-steuern.html"
   },
-  "buchhaltung-steuern-test": {
-    "name": "Buchhaltung und Steuern einfach geregelt (Test)",
-    "amount": 100,
-    "currency": "eur",
-    "priceLabel": "1,00 €",
-    "cover": "assets/img/products/ebook-buchhaltung-steuern-cover.webp",
-    "thankYouUrl": "ebook-download-buchhaltung-steuern.html"
-  },
   "google-ads": {
     "name": "So gewinnt man Kunden über Google Ads",
     "amount": 1999,
