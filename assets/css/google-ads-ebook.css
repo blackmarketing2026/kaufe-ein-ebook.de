@@ -607,7 +607,7 @@ section {
 .payment-badge {
   display: block;
   width: 100%;
-  max-width: 320px;
+  max-width: 480px;
   height: auto;
   margin: 18px auto 0;
 }

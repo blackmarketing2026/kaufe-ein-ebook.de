@@ -666,18 +666,33 @@ p {
     var(--panel-2);
 }
 
+.payment-badge-row {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.payment-badge-caption {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+
 .payment-badge-card {
   background: #fff;
   border-radius: 12px;
-  padding: 12px 16px;
-  display: flex;
+  padding: 16px 24px;
+  display: inline-flex;
   justify-content: center;
 }
 
 .payment-badge-card img {
   width: 100%;
   height: auto;
-  max-width: 360px;
+  max-width: 640px;
 }
 
 .price-box strong {
