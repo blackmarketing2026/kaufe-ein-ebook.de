@@ -4,14 +4,21 @@
   const params = new URLSearchParams(window.location.search);
   const productId = params.get("product");
 
-  const summaryEl = document.getElementById("checkout-summary");
+  const productEl = document.getElementById("checkout-product");
   const formEl = document.getElementById("payment-form");
   const submitButton = document.getElementById("checkout-submit");
   const messageEl = document.getElementById("payment-message");
   const paymentElementContainer = document.getElementById("payment-element");
+  const skeletonEl = document.getElementById("checkout-skeleton");
   const emailInput = document.getElementById("checkout-email");
 
-  function fail(text) {
+  function failProduct(text) {
+    formEl.hidden = true;
+    productEl.innerHTML = "<p>Produkt konnte nicht geladen werden.</p>";
+    KaufeCheckout.showMessage(messageEl, text, "error");
+  }
+
+  function failPayment(text) {
     formEl.hidden = true;
     KaufeCheckout.showMessage(messageEl, text, "error");
   }
@@ -22,11 +29,11 @@
       const product = products[productId];
 
       if (!product) {
-        fail("Unbekanntes Produkt. Bitte kehre zur Produktseite zurück und versuche es erneut.");
+        failProduct("Unbekanntes Produkt. Bitte kehre zur Produktseite zurück und versuche es erneut.");
         return;
       }
 
-      summaryEl.innerHTML =
+      productEl.innerHTML =
         '<img src="' + product.cover + '" alt="Cover: ' + product.name + '" />' +
         "<h1>" + product.name + "</h1>" +
         '<div class="checkout-price">' + product.priceLabel + "</div>" +
@@ -34,7 +41,7 @@
 
       startCheckout(product);
     })
-    .catch(() => fail("Produktdaten konnten nicht geladen werden. Bitte versuche es später erneut."));
+    .catch(() => failProduct("Produktdaten konnten nicht geladen werden. Bitte versuche es später erneut."));
 
   function startCheckout(product) {
     fetch("/api/create-payment-intent", {
@@ -45,7 +52,7 @@
       .then((response) => response.json().then((data) => ({ ok: response.ok, data: data })))
       .then((result) => {
         if (!result.ok) {
-          fail(result.data.error || "Zahlung derzeit nicht verfügbar. Bitte versuche es später erneut.");
+          failPayment(result.data.error || "Zahlung derzeit nicht verfügbar. Bitte versuche es später erneut.");
           return;
         }
 
@@ -70,6 +77,7 @@
         const paymentElement = elements.create("payment");
         paymentElement.mount(paymentElementContainer);
         paymentElement.on("ready", () => {
+          skeletonEl.hidden = true;
           submitButton.disabled = false;
         });
 
@@ -105,6 +113,6 @@
             });
         });
       })
-      .catch(() => fail("Zahlung derzeit nicht verfügbar. Bitte versuche es später erneut."));
+      .catch(() => failPayment("Zahlung derzeit nicht verfügbar. Bitte versuche es später erneut."));
   }
 })();
