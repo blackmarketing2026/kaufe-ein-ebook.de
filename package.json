@@ -1,0 +1,12 @@
+{
+  "name": "kaufe-ein-ebook.de",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Statische Landingpage + Vercel-Functions-Backend für den Stripe-Checkout von kaufe-ein-ebook.de",
+  "engines": {
+    "node": "20.x"
+  },
+  "dependencies": {
+    "stripe": "22.3.0"
+  }
+}

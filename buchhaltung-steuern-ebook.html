@@ -61,7 +61,7 @@
           <small>Finanzamt-Spielregeln für Selbstständige</small>
         </span>
       </a>
-      <a class="btn btn-primary header-cta" href="https://buy.stripe.com/fZu7sK4d7cQX90A6CC77O0v">Jetzt kaufen</a>
+      <a class="btn btn-primary header-cta" href="checkout.html?product=buchhaltung-steuern">Jetzt kaufen</a>
     </div>
   </header>
 
@@ -96,7 +96,7 @@
 
         <div class="hero-action-block reveal">
           <div class="hero-actions">
-            <a class="btn btn-primary btn-lg" href="https://buy.stripe.com/fZu7sK4d7cQX90A6CC77O0v">E-Book jetzt herunterladen</a>
+            <a class="btn btn-primary btn-lg" href="checkout.html?product=buchhaltung-steuern">E-Book jetzt herunterladen</a>
             <span>Allgemeine Orientierung. Keine individuelle Steuerberatung.</span>
           </div>
         </div>
@@ -302,7 +302,7 @@
             <strong>4,99 €</strong>
             <p>Sofortiger Download nach erfolgreicher Zahlung via Stripe.</p>
           </div>
-          <a class="btn btn-primary btn-lg btn-block" href="https://buy.stripe.com/fZu7sK4d7cQX90A6CC77O0v">Jetzt E-Book kaufen</a>
+          <a class="btn btn-primary btn-lg btn-block" href="checkout.html?product=buchhaltung-steuern">Jetzt E-Book kaufen</a>
         </article>
       </div>
     </section>
@@ -327,7 +327,7 @@
   </footer>
 
   <div class="sticky-cta" id="sticky-cta">
-    <a class="btn btn-primary" href="https://buy.stripe.com/fZu7sK4d7cQX90A6CC77O0v">Jetzt E-Book kaufen</a>
+    <a class="btn btn-primary" href="checkout.html?product=buchhaltung-steuern">Jetzt E-Book kaufen</a>
   </div>
 
   <div class="purchase-toast" id="purchase-toast" role="status" aria-live="polite" aria-atomic="true" hidden>
@@ -337,9 +337,9 @@
 
   <script src="assets/js/steuer-buchhaltung-ebook.js"></script>
 
-  <!-- Meta Pixel: Custom Event bei Klick auf Stripe-Checkout -->
+  <!-- Meta Pixel: Custom Event bei Klick auf Checkout -->
   <script>
-    document.querySelectorAll('a[href^="https://buy.stripe.com/"]').forEach(function (link) {
+    document.querySelectorAll('a[href^="checkout.html?product="]').forEach(function (link) {
       link.addEventListener('click', function () {
         if (typeof fbq === 'function') {
           fbq('trackCustom', 'Stripe');

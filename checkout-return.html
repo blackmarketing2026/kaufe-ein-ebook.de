@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-M6K93NVB');</script>
+  <!-- End Google Tag Manager -->
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Zahlung wird geprüft – kaufe-ein-ebook.de</title>
+  <link rel="icon" type="image/webp" href="assets/img/logo-256.webp" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/checkout.css" />
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M6K93NVB"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="brand">
+        <img src="assets/img/logo.webp" alt="kaufe-ein-ebook.de Logo" width="40" height="40" />
+        <span>kaufe-ein-ebook.de</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <div class="checkout-status-card">
+      <div class="spinner" id="checkout-return-spinner"></div>
+      <p>Deine Zahlung wird geprüft …</p>
+      <div id="payment-message" class="payment-message" role="alert" hidden></div>
+      <a href="checkout.html" id="checkout-return-back" class="btn btn-primary" hidden>Zurück zur Kasse</a>
+    </div>
+  </main>
+
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="assets/js/checkout-shared.js"></script>
+  <script src="assets/js/checkout-return.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-M6K93NVB');</script>
+  <!-- End Google Tag Manager -->
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Kasse – kaufe-ein-ebook.de</title>
+  <link rel="icon" type="image/webp" href="assets/img/logo-256.webp" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/checkout.css" />
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1366061822149988');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1366061822149988&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M6K93NVB"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="brand">
+        <img src="assets/img/logo.webp" alt="kaufe-ein-ebook.de Logo" width="40" height="40" />
+        <span>kaufe-ein-ebook.de</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="checkout-main">
+    <div class="checkout-shell">
+      <div class="checkout-summary" id="checkout-summary" aria-live="polite">
+        <p>Produkt wird geladen …</p>
+      </div>
+
+      <div class="checkout-form-card">
+        <h2>Zahlungsdaten</h2>
+        <form id="payment-form">
+          <div class="checkout-field">
+            <label for="checkout-email">E-Mail-Adresse (für deinen Beleg)</label>
+            <input type="email" id="checkout-email" name="email" required autocomplete="email" placeholder="du@beispiel.de" />
+          </div>
+
+          <div id="payment-element"></div>
+
+          <button type="submit" id="checkout-submit" class="btn btn-primary checkout-submit" disabled>
+            Jetzt kostenpflichtig bestellen
+          </button>
+
+          <div id="payment-message" class="payment-message" role="alert" hidden></div>
+        </form>
+
+        <p class="checkout-secure-note">🔒 Sichere Zahlungsabwicklung über Stripe. Wir sehen deine vollständigen Zahlungsdaten nie.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <span>&copy; <span id="year"></span> kaufe-ein-ebook.de – Alle Rechte vorbehalten.</span>
+      <div class="legal-links">
+        <a href="https://function-concept.com/datenschutz" target="_blank" rel="noopener noreferrer">Datenschutz</a>
+        <a href="https://function-concept.com/impressum" target="_blank" rel="noopener noreferrer">Impressum</a>
+        <a href="agb">AGB</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="assets/js/checkout-shared.js"></script>
+  <script src="assets/js/checkout.js"></script>
+</body>
+</html>

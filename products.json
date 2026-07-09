@@ -1,0 +1,18 @@
+{
+  "buchhaltung-steuern": {
+    "name": "Buchhaltung und Steuern einfach geregelt",
+    "amount": 499,
+    "currency": "eur",
+    "priceLabel": "4,99 €",
+    "cover": "assets/img/products/ebook-buchhaltung-steuern-cover.webp",
+    "thankYouUrl": "ebook-download-buchhaltung-steuern.html"
+  },
+  "google-ads": {
+    "name": "So gewinnt man Kunden über Google Ads",
+    "amount": 1999,
+    "currency": "eur",
+    "priceLabel": "19,99 €",
+    "cover": "assets/img/products/ebook-google-ads-cover.webp",
+    "thankYouUrl": "ebook-download-googleads.html"
+  }
+}
