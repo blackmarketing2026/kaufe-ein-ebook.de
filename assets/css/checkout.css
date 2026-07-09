@@ -163,12 +163,19 @@
   margin-bottom: 18px;
 }
 
-.checkout-field label {
+.checkout-field label,
+.checkout-field-label {
   display: block;
   font-weight: 600;
   font-size: 0.88rem;
   color: var(--color-text);
   margin-bottom: 6px;
+}
+
+.checkout-payment-heading {
+  margin: 24px 0 16px;
+  font-size: 1.05rem;
+  color: var(--color-navy);
 }
 
 .checkout-field input[type="email"] {

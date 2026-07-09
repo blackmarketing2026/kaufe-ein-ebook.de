@@ -95,7 +95,7 @@
       </div>
 
       <div class="checkout-form-card">
-        <h2>Zahlungsdaten</h2>
+        <h2>Deine Daten</h2>
 
         <div class="checkout-trust-row">
           <span>
@@ -110,9 +110,16 @@
 
         <form id="payment-form">
           <div class="checkout-field">
-            <label for="checkout-email">E-Mail-Adresse (für deinen Beleg)</label>
+            <label for="checkout-email">E-Mail-Adresse (für E-Book-Zugang und Rechnung)</label>
             <input type="email" id="checkout-email" name="email" required autocomplete="email" placeholder="du@beispiel.de" />
           </div>
+
+          <div class="checkout-field">
+            <span class="checkout-field-label">Name, Telefonnummer und Rechnungsadresse</span>
+            <div id="address-element"></div>
+          </div>
+
+          <h2 class="checkout-payment-heading">Zahlungsart</h2>
 
           <div class="checkout-payment-element-wrap">
             <div id="payment-element"></div>

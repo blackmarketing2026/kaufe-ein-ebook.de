@@ -9,6 +9,7 @@
   const submitButton = document.getElementById("checkout-submit");
   const messageEl = document.getElementById("payment-message");
   const paymentElementContainer = document.getElementById("payment-element");
+  const addressElementContainer = document.getElementById("address-element");
   const skeletonEl = document.getElementById("checkout-skeleton");
   const emailInput = document.getElementById("checkout-email");
 
@@ -74,6 +75,12 @@
           },
         });
 
+        const addressElement = elements.create("address", {
+          mode: "billing",
+          fields: { phone: "always" },
+        });
+        addressElement.mount(addressElementContainer);
+
         const paymentElement = elements.create("payment");
         paymentElement.mount(paymentElementContainer);
         paymentElement.on("ready", () => {
@@ -86,31 +93,47 @@
           submitButton.disabled = true;
           messageEl.hidden = true;
 
-          stripe
-            .confirmPayment({
-              elements: elements,
-              redirect: "if_required",
-              confirmParams: {
-                return_url: KaufeCheckout.buildReturnUrl(productId, publishableKey),
-                receipt_email: emailInput.value,
-              },
-            })
-            .then((confirmResult) => {
-              if (confirmResult.error) {
-                submitButton.disabled = false;
-                KaufeCheckout.showMessage(messageEl, confirmResult.error.message, "error");
-                return;
-              }
+          addressElement.getValue().then((addressResult) => {
+            if (!addressResult.complete) {
+              submitButton.disabled = false;
+              KaufeCheckout.showMessage(messageEl, "Bitte fülle Name, Telefonnummer und Adresse vollständig aus.", "error");
+              return;
+            }
 
-              const status = KaufeCheckout.describeStatus(confirmResult.paymentIntent.status);
-              KaufeCheckout.showMessage(messageEl, status.message, status.type);
+            const billingDetails = {
+              name: addressResult.value.name,
+              phone: addressResult.value.phone,
+              email: emailInput.value,
+              address: addressResult.value.address,
+            };
 
-              if (status.type === "success") {
-                window.location.href = product.thankYouUrl;
-              } else {
-                submitButton.disabled = false;
-              }
-            });
+            stripe
+              .confirmPayment({
+                elements: elements,
+                redirect: "if_required",
+                confirmParams: {
+                  return_url: KaufeCheckout.buildReturnUrl(productId, publishableKey),
+                  receipt_email: emailInput.value,
+                  payment_method_data: { billing_details: billingDetails },
+                },
+              })
+              .then((confirmResult) => {
+                if (confirmResult.error) {
+                  submitButton.disabled = false;
+                  KaufeCheckout.showMessage(messageEl, confirmResult.error.message, "error");
+                  return;
+                }
+
+                const status = KaufeCheckout.describeStatus(confirmResult.paymentIntent.status);
+                KaufeCheckout.showMessage(messageEl, status.message, status.type);
+
+                if (status.type === "success") {
+                  window.location.href = product.thankYouUrl;
+                } else {
+                  submitButton.disabled = false;
+                }
+              });
+          });
         });
       })
       .catch(() => failPayment("Zahlung derzeit nicht verfügbar. Bitte versuche es später erneut."));
