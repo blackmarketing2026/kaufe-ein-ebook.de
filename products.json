@@ -14,5 +14,13 @@
     "priceLabel": "19,99 €",
     "cover": "assets/img/products/ebook-google-ads-cover.webp",
     "thankYouUrl": "ebook-download-googleads.html"
+  },
+  "buchhaltung-fuer-anfaenger": {
+    "name": "Buchhaltung für Anfänger",
+    "amount": 999,
+    "currency": "eur",
+    "priceLabel": "9,99 €",
+    "cover": "assets/img/products/ebook-buchhaltung-fuer-anfaenger-cover.webp",
+    "thankYouUrl": "ebook-download-buchhaltung-fuer-anfaenger.html"
   }
 }

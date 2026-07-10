@@ -45,7 +45,7 @@ vercel dev
 vercel env pull   # lädt die im Dashboard hinterlegten Variablen in .env.local
 ```
 
-`checkout.html?product=buchhaltung-steuern` bzw. `?product=google-ads` aufrufen und mit einer [Stripe-Testkarte](https://docs.stripe.com/testing) (z. B. `4242 4242 4242 4242`) durchspielen.
+`checkout.html?product=buchhaltung-steuern`, `?product=google-ads` bzw. `?product=buchhaltung-fuer-anfaenger` aufrufen und mit einer [Stripe-Testkarte](https://docs.stripe.com/testing) (z. B. `4242 4242 4242 4242`) durchspielen.
 
 ## Rechtliches
 

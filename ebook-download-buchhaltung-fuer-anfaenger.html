@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-M6K93NVB');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- GTM DataLayer: Bestellwert dieser Dankeseite -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({
+      event: 'purchase',
+      value: 9.99,
+      currency: 'EUR'
+    });
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Danke für deinen Kauf – kaufe-ein-ebook.de</title>
+  <link rel="icon" type="image/webp" href="assets/img/logo-256.webp" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1366061822149988');
+  fbq('track', 'PageView');
+  fbq('track', 'Purchase', {value: 9.99, currency: 'EUR'});
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1366061822149988&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(160deg, #2f9678 0%, #114d3c 100%);
+      padding: 40px 20px;
+    }
+
+    .thank-you {
+      text-align: center;
+      max-width: 420px;
+    }
+
+    .thank-you .eyebrow {
+      display: inline-block;
+      background: rgba(239, 122, 82, 0.18);
+      color: #ffb08a;
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin-bottom: 20px;
+    }
+
+    .thank-you .cover {
+      width: 100%;
+      max-width: 320px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
+      margin: 0 auto 32px;
+    }
+
+    .thank-you .btn-primary {
+      font-size: 1.05rem;
+      padding: 16px 40px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M6K93NVB"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <div class="thank-you">
+    <span class="eyebrow">Danke für deinen Kauf</span>
+    <!--
+      Platzhalter-Cover: assets/img/products/ebook-buchhaltung-fuer-anfaenger-cover.webp
+      existiert noch nicht. Sobald das echte Cover geliefert wird, dort ablegen –
+      dieser Pfad ist bereits in products.json hinterlegt und muss dann nicht mehr geändert werden.
+    -->
+    <img
+      class="cover"
+      src="assets/img/products/ebook-buchhaltung-fuer-anfaenger-cover.webp"
+      alt="Cover: Buchhaltung für Anfänger"
+      width="600"
+      height="900"
+    />
+    <!--
+      Platzhalter-PDF: ebooks/Buchhaltung_fuer_Anfaenger.pdf existiert noch nicht.
+      Sobald die echte Datei geliefert wird, unter diesem Namen in ebooks/ ablegen.
+    -->
+    <a href="ebooks/Buchhaltung_fuer_Anfaenger.pdf" download="Buchhaltung_fuer_Anfaenger.pdf" class="btn btn-primary">E-Book herunterladen</a>
+  </div>
+
+</body>
+</html>
