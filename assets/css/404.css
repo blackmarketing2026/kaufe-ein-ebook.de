@@ -1,0 +1,347 @@
+:root {
+  --navy: #1b2a4a;
+  --navy-dark: #101c34;
+  --navy-light: #2a3d68;
+  --orange: #f47920;
+  --orange-dark: #d9650f;
+  --orange-soft: rgba(244, 121, 32, 0.14);
+  --white: #ffffff;
+  --gray-50: #f6f7fb;
+  --gray-100: #eceff5;
+  --gray-500: #5b6478;
+  --gray-700: #333a4a;
+  --radius: 16px;
+  --shadow-soft: 0 18px 44px rgba(27, 42, 74, 0.1);
+  --shadow-strong: 0 30px 70px rgba(6, 12, 28, 0.4);
+  --max-width: 900px;
+  --font: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: var(--gray-700);
+  background: var(--white);
+  font-family: var(--font);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 2px;
+}
+
+/* Header */
+.site-header {
+  padding: 18px 0;
+}
+
+.site-header .container {
+  max-width: 1180px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--navy);
+  font-weight: 700;
+}
+
+.brand img {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+}
+
+/* Hero */
+.notfound {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 30px 0 50px;
+  background: radial-gradient(circle at 85% 10%, #24386c 0%, var(--navy) 45%, var(--navy-dark) 100%);
+  color: var(--white);
+  overflow: hidden;
+}
+
+.notfound .container {
+  text-align: center;
+}
+
+.notfound-visual {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 10px;
+}
+
+.notfound-page {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 128px;
+  height: 150px;
+  background: var(--white);
+  border-radius: 10px 10px 10px 0;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notfound-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 22px 22px 0;
+  border-color: transparent var(--gray-100) transparent transparent;
+  border-radius: 0 0 0 4px;
+}
+
+.notfound-page span {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: var(--orange);
+}
+
+.notfound-emoji {
+  position: absolute;
+  font-size: 1.6rem;
+  animation: float 3.6s ease-in-out infinite;
+}
+
+.notfound-emoji.e1 {
+  top: -6px;
+  left: -4px;
+  animation-delay: 0s;
+}
+
+.notfound-emoji.e2 {
+  bottom: 6px;
+  right: -14px;
+  animation-delay: 0.6s;
+}
+
+.notfound-emoji.e3 {
+  top: 46%;
+  left: -30px;
+  animation-delay: 1.2s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(-4deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(4deg);
+  }
+}
+
+.error-code {
+  font-size: clamp(3.4rem, 12vw, 6rem);
+  font-weight: 800;
+  line-height: 1;
+  margin: 4px 0 6px;
+  background: linear-gradient(135deg, var(--orange), #ffb35c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.notfound h1 {
+  color: var(--white);
+  font-size: clamp(1.4rem, 3.6vw, 1.9rem);
+  margin: 0 0 14px;
+}
+
+.notfound-lede {
+  max-width: 560px;
+  margin: 0 auto 30px;
+  color: #c7d2ea;
+  font-size: 1.02rem;
+}
+
+/* Joke card */
+.joke-card {
+  max-width: 560px;
+  margin: 0 auto 32px;
+  padding: 24px 26px;
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(6px);
+}
+
+.joke-eyebrow {
+  display: inline-block;
+  color: var(--orange);
+  font-weight: 800;
+  font-size: 0.76rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+#joke-text {
+  min-height: 3.2em;
+  font-size: 1.12rem;
+  font-weight: 600;
+  color: var(--white);
+  margin: 0 0 16px;
+  transition: opacity 0.2s ease;
+}
+
+#joke-text.fading {
+  opacity: 0;
+}
+
+.joke-reroll {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 18px;
+  border-radius: 999px;
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  background: transparent;
+  color: var(--white);
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.joke-reroll:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-1px);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 52px;
+  padding: 15px 28px;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.98rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.btn-primary {
+  color: var(--white);
+  background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+  box-shadow: 0 14px 30px rgba(244, 121, 32, 0.35);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 38px rgba(244, 121, 32, 0.45);
+}
+
+.btn-outline {
+  color: var(--white);
+  background: transparent;
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.notfound-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.notfound-secondary {
+  display: inline-block;
+  color: #d7e0f5;
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Footer */
+.site-footer {
+  padding: 26px 0;
+  background: var(--navy-dark);
+  color: #8592b3;
+  font-size: 0.85rem;
+}
+
+.footer-legal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.footer-legal a {
+  color: #b7c1da;
+  text-decoration: none;
+}
+
+.footer-legal a:hover {
+  color: var(--orange);
+}
+
+.footer-copy {
+  text-align: center;
+  color: #6b7590;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .notfound-emoji {
+    animation: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .notfound-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .notfound-actions .btn {
+    width: 100%;
+  }
+}
