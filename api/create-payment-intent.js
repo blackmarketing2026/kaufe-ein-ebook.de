@@ -29,7 +29,10 @@ module.exports = async (req, res) => {
       amount: product.amount,
       currency: product.currency,
       automatic_payment_methods: { enabled: true },
-      metadata: { product: productId },
+      metadata: {
+        product: productId,
+        ...(product.stripeProductId ? { stripe_product_id: product.stripeProductId } : {}),
+      },
     });
 
     return res.status(200).json({

@@ -14,7 +14,7 @@
     window.dataLayer = window.dataLayer || [];
     dataLayer.push({
       event: 'purchase',
-      value: 9.99,
+      value: 4.99,
       currency: 'EUR'
     });
   </script>
@@ -23,8 +23,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow" />
   <title>Danke für deinen Kauf – kaufe-ein-ebook.de</title>
-  <link rel="icon" type="image/webp" href="assets/img/logo-256.webp" />
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" type="image/webp" href="/assets/img/logo-256.webp" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
 
   <!-- Meta Pixel Code -->
   <script>
@@ -38,7 +38,7 @@
   'https://connect.facebook.net/en_US/fbevents.js');
   fbq('init', '1366061822149988');
   fbq('track', 'PageView');
-  fbq('track', 'Purchase', {value: 9.99, currency: 'EUR'});
+  fbq('track', 'Purchase', {value: 4.99, currency: 'EUR'});
   </script>
   <noscript><img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=1366061822149988&ev=PageView&noscript=1"
@@ -51,7 +51,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(160deg, #2f9678 0%, #114d3c 100%);
+      background: linear-gradient(160deg, var(--color-navy) 0%, var(--color-navy-dark) 100%);
       padding: 40px 20px;
     }
 
@@ -62,8 +62,8 @@
 
     .thank-you .eyebrow {
       display: inline-block;
-      background: rgba(239, 122, 82, 0.18);
-      color: #ffb08a;
+      background: rgba(244, 121, 32, 0.16);
+      color: #ffb066;
       font-weight: 700;
       font-size: 0.8rem;
       letter-spacing: 0.06em;
@@ -98,12 +98,12 @@
     <span class="eyebrow">Danke für deinen Kauf</span>
     <img
       class="cover"
-      src="assets/img/products/ebook-buchhaltung-fuer-anfaenger-cover.webp"
-      alt="Cover: Buchhaltung für Anfänger"
+      src="/assets/img/products/ebook-buchhaltung-steuern-cover.webp"
+      alt="Cover: Buchhaltung und Steuern einfach geregelt"
       width="600"
       height="900"
     />
-    <a href="ebooks/Buchhaltung_fuer_Anfaenger.pdf" download="Buchhaltung_fuer_Anfaenger.pdf" class="btn btn-primary">E-Book herunterladen</a>
+    <a href="Buchhaltung_und_Steuern_einfach_geregelt_dunkles_design.pdf" download="Buchhaltung_und_Steuern_einfach_geregelt.pdf" class="btn btn-primary">E-Book herunterladen</a>
   </div>
 
 </body>

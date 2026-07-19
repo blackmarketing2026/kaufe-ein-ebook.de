@@ -25,8 +25,8 @@
   <meta name="twitter:description" content="Spiel die Steuer-Regeln, bevor das Finanzamt dich überrascht. Der Praxis-Guide für Solo-Selbstständige, Gründer und Freelancer." />
   <meta name="twitter:image" content="https://kaufe-ein-ebook.de/assets/img/products/steuer-buchhaltung-ebook-og-image.jpg" />
 
-  <link rel="icon" type="image/webp" href="assets/img/logo-256.webp" />
-  <link rel="stylesheet" href="assets/css/steuer-buchhaltung-ebook.css" />
+  <link rel="icon" type="image/webp" href="/assets/img/logo-256.webp" />
+  <link rel="stylesheet" href="/assets/css/steuer-buchhaltung-ebook.css" />
 
   <!-- Meta Pixel Code -->
   <script>
@@ -61,7 +61,7 @@
           <small>Finanzamt-Spielregeln für Selbstständige</small>
         </span>
       </a>
-      <a class="btn btn-primary header-cta" href="checkout.html?product=buchhaltung-steuern">Jetzt kaufen</a>
+      <a class="btn btn-primary header-cta" href="/checkout.html?product=buchhaltung-steuern">Jetzt kaufen</a>
     </div>
   </header>
 
@@ -85,7 +85,7 @@
 
         <div class="hero-product reveal">
           <div class="hero-cover">
-            <img src="assets/img/products/ebook-buchhaltung-steuern-cover.webp" alt="Cover des E-Books Buchhaltung und Steuern: Wie du das Spiel mit dem Finanzamt durchspielst" width="600" height="900" loading="eager" />
+            <img src="/assets/img/products/ebook-buchhaltung-steuern-cover.webp" alt="Cover des E-Books Buchhaltung und Steuern: Wie du das Spiel mit dem Finanzamt durchspielst" width="600" height="900" loading="eager" />
           </div>
           <div class="hero-proof-card" aria-label="Kurzinfos zum E-Book">
             <strong>4,99 €</strong>
@@ -96,7 +96,7 @@
 
         <div class="hero-action-block reveal">
           <div class="hero-actions">
-            <a class="btn btn-primary btn-lg" href="checkout.html?product=buchhaltung-steuern">E-Book jetzt herunterladen</a>
+            <a class="btn btn-primary btn-lg" href="/checkout.html?product=buchhaltung-steuern">E-Book jetzt herunterladen</a>
             <span>Allgemeine Orientierung. Keine individuelle Steuerberatung.</span>
           </div>
         </div>
@@ -302,7 +302,7 @@
             <strong>4,99 €</strong>
             <p>Sofortiger Download nach erfolgreicher Zahlung via Stripe.</p>
           </div>
-          <a class="btn btn-primary btn-lg btn-block" href="checkout.html?product=buchhaltung-steuern">Jetzt E-Book kaufen</a>
+          <a class="btn btn-primary btn-lg btn-block" href="/checkout.html?product=buchhaltung-steuern">Jetzt E-Book kaufen</a>
         </article>
       </div>
 
@@ -310,7 +310,7 @@
         <span class="payment-badge-caption">Akzeptierte Zahlungsarten</span>
         <div class="payment-badge-card">
           <img
-            src="assets/img/payment-trust-badge.webp"
+            src="/assets/img/payment-trust-badge.webp"
             alt="Revolut Pay, Apple Pay, Google Pay, Link, Amazon Pay, Mastercard, Visa, American Express"
             width="1248"
             height="108"
@@ -334,16 +334,16 @@
       <nav aria-label="Footer Navigation">
         <a href="https://function-concept.com/impressum" target="_blank" rel="noopener noreferrer">Impressum</a>
         <a href="https://function-concept.com/datenschutz" target="_blank" rel="noopener noreferrer">Datenschutz</a>
-        <a href="agb">AGB</a>
-        <a href="widerrufsbelehrung">Widerrufsbelehrung</a>
-        <a href="widerrufsbelehrung#so-widerrufst-du">Vertrag widerrufen</a>
+        <a href="/agb">AGB</a>
+        <a href="/widerrufsbelehrung">Widerrufsbelehrung</a>
+        <a href="/widerrufsbelehrung#so-widerrufst-du">Vertrag widerrufen</a>
         <a href="mailto:kontakt@kaufe-ein-ebook.de">Kontakt</a>
       </nav>
     </div>
   </footer>
 
   <div class="sticky-cta" id="sticky-cta">
-    <a class="btn btn-primary" href="checkout.html?product=buchhaltung-steuern">Jetzt E-Book kaufen</a>
+    <a class="btn btn-primary" href="/checkout.html?product=buchhaltung-steuern">Jetzt E-Book kaufen</a>
   </div>
 
   <div class="purchase-toast" id="purchase-toast" role="status" aria-live="polite" aria-atomic="true" hidden>
@@ -351,11 +351,11 @@
     <p><strong id="purchase-toast-name">Person X</strong> hat vor <span id="purchase-toast-time">42 Sekunden</span> gekauft.</p>
   </div>
 
-  <script src="assets/js/steuer-buchhaltung-ebook.js"></script>
+  <script src="/assets/js/steuer-buchhaltung-ebook.js"></script>
 
   <!-- Meta Pixel: Custom Event bei Klick auf Checkout -->
   <script>
-    document.querySelectorAll('a[href^="checkout.html?product="]').forEach(function (link) {
+    document.querySelectorAll('a[href^="/checkout.html?product="]').forEach(function (link) {
       link.addEventListener('click', function () {
         if (typeof fbq === 'function') {
           fbq('trackCustom', 'Stripe');

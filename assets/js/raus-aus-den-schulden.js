@@ -1,7 +1,5 @@
-// Zentrale Konstante für den internen Checkout (gleiche Payment-Intent-API wie
-// die anderen Produkte, Produkt-Slug muss zu products.json passen).
-const CHECKOUT_URL = "/checkout.html?product=buchhaltung-fuer-anfaenger";
-const PRODUCT_NAME = "Buchhaltung für Anfänger";
+const CHECKOUT_URL = "/checkout.html?product=raus-aus-den-schulden";
+const PRODUCT_NAME = "Raus aus den Schulden";
 
 const buyLinks = document.querySelectorAll(".js-buy-link");
 

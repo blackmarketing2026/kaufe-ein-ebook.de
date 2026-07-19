@@ -5,7 +5,7 @@
     "currency": "eur",
     "priceLabel": "4,99 €",
     "cover": "assets/img/products/ebook-buchhaltung-steuern-cover.webp",
-    "thankYouUrl": "ebook-download-buchhaltung-steuern.html"
+    "thankYouUrl": "/buchhaltung-steuern-ebook/danke.html"
   },
   "google-ads": {
     "name": "So gewinnt man Kunden über Google Ads",
@@ -13,7 +13,7 @@
     "currency": "eur",
     "priceLabel": "19,99 €",
     "cover": "assets/img/products/ebook-google-ads-cover.webp",
-    "thankYouUrl": "ebook-download-googleads.html"
+    "thankYouUrl": "/google-ads-ebook/danke.html"
   },
   "buchhaltung-fuer-anfaenger": {
     "name": "Buchhaltung für Anfänger",
@@ -21,6 +21,15 @@
     "currency": "eur",
     "priceLabel": "9,99 €",
     "cover": "assets/img/products/ebook-buchhaltung-fuer-anfaenger-cover.webp",
-    "thankYouUrl": "ebook-download-buchhaltung-fuer-anfaenger.html"
+    "thankYouUrl": "/buchhaltung-fuer-anfaenger/danke.html"
+  },
+  "raus-aus-den-schulden": {
+    "name": "Raus aus den Schulden",
+    "amount": 999,
+    "currency": "eur",
+    "priceLabel": "9,99 €",
+    "cover": "/raus-aus-den-schulden/cover.webp",
+    "thankYouUrl": "/raus-aus-den-schulden/danke.html",
+    "stripeProductId": "prod_UupvmLcJopgWXC"
   }
 }
